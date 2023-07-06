@@ -1,5 +1,3 @@
-import {uuidRegExp} from "./uuidUtil";
-
 export enum Endpoints {
   API = `/api`,
   USERS = `${Endpoints.API}/users`,

@@ -1,7 +1,7 @@
 // @ts-ignore
 import http from 'node:http'
-import {Endpoints, isEndpointExists, isUserEndpoint, isUsersEndpoint} from "../utils/urlUtil";
-import {sendErrorResponse, sendSuccessfulResponse} from "../utils/responseUtil";
+import {isEndpointExists, isUserEndpoint, isUsersEndpoint} from "../utils/urlUtil";
+import {sendErrorResponse} from "../utils/responseUtil";
 import {Methods} from "../utils/enumMethods";
 import {createNewUser, removeUser, sendAllUsers, sendUser, updateUser} from "../controllers/usersController";
 
@@ -59,6 +59,5 @@ export const server = http.createServer((req, res): void => {
       message: 'Error: Invalid URL'
     })
   }
-
 })
 
