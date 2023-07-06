@@ -10,7 +10,7 @@ export interface SuccessResponseData{
   res: ServerResponse,
   statusCode: number,
   headers?: object,
-  data: any
+  data: object
 }
 
 export const sendErrorResponse = ({res, statusCode, message}: ErrorResponseData): void => {
@@ -18,8 +18,7 @@ export const sendErrorResponse = ({res, statusCode, message}: ErrorResponseData)
   res.end(JSON.stringify({ statusCode, message }))
 }
 
-export const sendSuccessfulResponse =
-  ({
+export const sendSuccessfulResponse = ({
      res,
      statusCode,
      headers = { 'Content-Type': 'application/json' },

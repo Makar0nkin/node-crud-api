@@ -1,3 +1,4 @@
+import {uuidRegExp} from "./uuidUtil";
 
 export enum Endpoints {
   API = `/api`,
@@ -13,6 +14,6 @@ export const isUsersEndpoint = (url: string): boolean => {
 }
 
 export const isUserEndpoint = (url: string): boolean => {
-  return !!url.match(new RegExp(Endpoints.USERS + '/([0-9]+)$'))
+  return !!url.match(new RegExp(Endpoints.USERS + '/'))
 }
 
