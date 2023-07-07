@@ -4,6 +4,9 @@
 # task
 assignment.md
 
+# env
+.env
+
 # Logs
 logs
 *.log
