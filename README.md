@@ -44,4 +44,5 @@ At this case the project build will be made by `webpack` and start after that
     - Server answer with `status code` **204** if the record is found and deleted
     - Server answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
     - Server answer with `status code` **404** and corresponding message if record with `id === userId` doesn't exist
-- if app handle an error then the server will answer with `status code` **500** and some message
+- If app handle an error then the server will answer with `status code` **500** and some message
+- Request to non-existing endpoints are handled (server answer with `status code` **404**) 
